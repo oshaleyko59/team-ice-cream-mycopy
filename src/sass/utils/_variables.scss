@@ -1,0 +1,22 @@
+
+// colors //
+$colors: (
+    'main-background-color': #84a178,
+    'main-yellow': #f8d24e,
+    'main-text-black': #131313,
+    'modalback-and-textcolor-white': #fcfcfc,
+
+    'product-ingredients-green': #aec6a5,
+    'product-background-yellow': #efd478,
+    'product-text-babyshit': #d6936d,
+    'bright-green-btn': #0a8817,
+
+    'personal-info-background': rgba(248, 210, 78, 0.1),
+    'text-grey': #ababab,
+    'all-rights-text': #7a7a7a,
+);
+
+        // кубік бізаір
+        $cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
+        // стандартний час переходу
+        $main-transition-time: 250ms;
