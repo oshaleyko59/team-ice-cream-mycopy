@@ -12,10 +12,7 @@ ul {
     // padding: 0;
 }
 
-body {
-    @include base-fonts;
-    background-color: getColor('main-background-color');
-}
+
 
 .container {
     max-width: 480px;
