@@ -16,14 +16,24 @@
 }
 
 .header__logo {
-    margin-right: 308px;
+    margin-right: 0;
+    @media screen and (min-width: 768px) {
+        margin-right: 444px;
+    }
+    @media screen and (min-width: 1200px) {
+        margin-right: 308px;
+    }
 }
 
 .header__navigation {
     margin-right: auto;
 }
+
 .menu {
-    display: flex;
+    display: none;
+    @media screen and (min-width: 1200px) {
+        display: flex;
+    }
     gap: 28px;
 }
 
@@ -31,55 +41,72 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 1.25;
-
     color: getColor('modalback-and-textcolor-white');
 
     transition: color $main-transition-time $cubic-bezier;
-}
-
-.menu__link:hover,
-.menu__link:focus {
-    color: getColor('main-yellow');
-}
-
-.button {
-    border: 1px solid transparent;
-    border-radius: 10px;
-
+    &:hover,
+    &:focus {
+        color: getColor('main-yellow');
+    }
 }
 
 .header__btn {
-    // display: flex;
-    // align-items: center;
-    // justify-content: space-between;
-    // text-align: center;
-
+    display: none;
+    @media screen and (min-width: 768px) {
+        display: block;
+    }
     min-width: 152px;
     height: 42px;
     border: 0;
+    border-radius: 10px;
     padding: 0;
     background-color: getColor('main-yellow');
     color: #000000;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 14px;    
     line-height: 1.21;
 
-    // transition: background-color var(--transition);
-}
+    transition: background-color $main-transition-time $cubic-bezier, color $main-transition-time $cubic-bezier;
 
-.header__btn:hover {
-    background-color: getColor('bright-green-btn');
+    &:hover {
+        background-color: getColor('bright-green-btn');
     }
-
-.header__btn:focus {
+    &:focus {
     background-color: getColor('bright-green-btn');
     color: #ffffff;
+    }
 }
 
 .header-btn__icon {
     margin-left: 8px;
+    .header__btn:focus & {
+    fill: #ffffff;
+    }
 }
 
-.header__btn:focus .header-btn__icon {
-    fill: #ffffff;
+.menu-open {
+    // width: 32px;
+    // height: 32px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-left: auto;
+    margin-top: 17px;
+    margin-bottom: 17px;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    @media screen and (min-width: 1200px) {
+        display: none;
+    }
+}
+
+.menu-open-icon {
+    .menu-open:hover &,
+    .menu-open:focus & {
+        fill: getColor('main-yellow');
+    }
+    transition: fill $main-transition-time $cubic-bezier;
 }
