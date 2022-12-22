@@ -1,5 +1,5 @@
 .header {
-    background-color: #84a178;
+    background-color: getColor('main-background-color');
     padding-top: 20px;
     padding-bottom: 20px;
     @media screen and(min-width:1200px) {
@@ -32,12 +32,54 @@
     font-size: 16px;
     line-height: 1.25;
 
-    color: #FCFCFC;
+    color: getColor('modalback-and-textcolor-white');
 
     transition: color $main-transition-time $cubic-bezier;
 }
 
 .menu__link:hover,
 .menu__link:focus {
-    color: #f8d24e;
+    color: getColor('main-yellow');
+}
+
+.button {
+    border: 1px solid transparent;
+    border-radius: 10px;
+
+}
+
+.header__btn {
+    // display: flex;
+    // align-items: center;
+    // justify-content: space-between;
+    // text-align: center;
+
+    min-width: 152px;
+    height: 42px;
+    border: 0;
+    padding: 0;
+    background-color: getColor('main-yellow');
+    color: #000000;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.21;
+
+    // transition: background-color var(--transition);
+}
+
+.header__btn:hover {
+    background-color: getColor('bright-green-btn');
+    }
+
+.header__btn:focus {
+    background-color: getColor('bright-green-btn');
+    color: #ffffff;
+}
+
+.header-btn__icon {
+    margin-left: 8px;
+}
+
+.header__btn:focus .header-btn__icon {
+    fill: #ffffff;
 }
