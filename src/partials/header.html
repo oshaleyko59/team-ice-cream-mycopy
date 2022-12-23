@@ -37,5 +37,44 @@
             </button>
         </div>
     </div>
+<!---------------- MOBILE MENU ------------>
+<div class="mob-menu is-hidden" data-menu>
+    <div class="container">
+
+        <a href="/" class="mob-menu__logo">
+            <picture class="mob-menu-logo__image">
+                <source srcset="./images/logo_png/logo@1x.png 1x, ./images/logo_png/logo@2x.png 2x, ./images/logo_png/logo@3x.png 3x" media="(min-width: 1200px)">
+                <source srcset="./images/logo_png/logo-tab@1x.png 1x, ./images/logo_png/logo-tab@2x.png 2x, ./images/logo_png/logo-tab@3x.png 3x" media="(min-width: 768px)">
+                <source srcset="./images/logo_png/logo-mob@1x.png 1x, ./images/logo_png/logo-mob@2x.png 2x, ./images/logo_png/logo-mob@3x.png 3x" media="(max-width: 767px)">
+                <img src="./images/logo_png/logo@1x.png" alt="Ice c ream logo">
+            </picture>
+        </a>
+        <button type="button" class="menu-close" data-menu-close>
+            <svg class="menu-close-icon" width="19" height="19">
+                <use href="./images/sprite.svg#close_black"></use>
+            </svg>
+        </button>
+
+            <ul class="mob-menu__list list">
+                    <li class="mob-menu__item">
+                        <a href="#home" class="mob-menu__link link">Home</a>
+                    </li>
+                    <li class="mob-menu__item">
+                        <a href="#about" class="mob-menu__link link">How it’s made?</a>
+                    </li>
+                    <li class="mob-menu__item">
+                        <a href="#products" class="mob-menu__link link">Our products</a>
+                    </li>
+                    <li class="mob-menu__item">
+                        <a href="#contacts" class="mob-menu__link link">Contact</a>
+                    </li>
+            </ul>
+            <button type="button" class="mob-menu__btn">Buy now
+                <svg class="mob-menu-btn__icon" width="6" height="10">
+                        <use href="./images/sprite.svg#button-arrow"></use>
+                </svg>
+            </button>
+
+    </div>
+</div>
 </header>
-<!--  -->
