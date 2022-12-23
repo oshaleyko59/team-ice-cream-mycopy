@@ -19,9 +19,11 @@
    }
 
    &__top {
-      padding-left: 20px;
-      padding-right: 20px;
-      padding-bottom: 39px;
+      @media screen and (max-width: 767px) {
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 39px;
+         }
 
       @media screen and (min-width: 768px) {
             display: flex;
@@ -148,6 +150,12 @@
       @media screen and (min-width: 768px) {
          font-size: 14px;
          line-height: 1.86;
+      }
+
+      @media screen and (min-width: 1200px) {
+         font-size: 16px;
+         line-height: 1.875;
+         letter-spacing: 0.02em;
       }
    }
 
