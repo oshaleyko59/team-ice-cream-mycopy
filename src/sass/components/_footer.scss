@@ -2,27 +2,61 @@
    margin-right: auto;
    margin-left: auto;
 
-   background-color: #84a178;
+   background-color: getColor("main-background-color");
 
    @media screen and (max-width: 767px) {
       max-width: 480px;
    }
 
+   @media screen and (min-width: 768px) {
+      width: 768px;
+   }
+
+   @media screen and (min-width: 1200px) {
+      width: 1200px;
+      padding-left: 16px;
+      padding-right: 16px;
+   }
+
+   &__container {
+   }
+
    &__top {
       padding-left: 20px;
       padding-right: 20px;
+      padding-bottom: 39px;
+
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
+         padding-left: 32px;
+         padding-right: 32px;
+         padding-bottom: 31px;
+      }
+
+      @media screen and (min-width: 768px) {
+         display: flex;
+      }
+
+      @media screen and (min-width: 1200px) {
+         padding-bottom: 59px;
+      }
    }
 
    &__title-wrap {
-      max-width: 234px;
-      margin-bottom: 60px;
-
       font-family: "Montserrat";
       font-style: normal;
       font-weight: 700;
       text-transform: uppercase;
 
-      color: #fcfcfc;
+      color: getColor("modalback-and-textcolor-white");
+
+      @media screen and (max-width: 767px) {
+         margin-bottom: 60px;
+         max-width: 234px;
+      }
+
+      @media screen and (min-width: 768px) {
+         width: 50%;
+      }
    }
 
    &__uptitle {
@@ -30,12 +64,38 @@
 
       font-size: 18px;
       line-height: 1.22;
+
+      @media screen and (min-width: 768px) {
+         margin-bottom: 8px;
+         font-size: 26px;
+         line-height: 1.23;
+      }
+
+      @media screen and (min-width: 1200px) {
+         margin-bottom: 14px;
+         font-size: 30px;
+      }
    }
 
    &__title {
       font-size: 34px;
       line-height: 1.21;
       letter-spacing: 0.04em;
+
+      @media screen and (min-width: 768px) {
+         font-size: 48px;
+         line-height: 1.23;
+      }
+
+      @media screen and (min-width: 1200px) {
+         font-size: 58px;
+      }
+   }
+
+   &__social-wrap {
+      @media screen and (min-width: 768px) {
+         width: 50%;
+      }
    }
 
    &__social-list {
@@ -44,14 +104,30 @@
       display: flex;
       justify-content: end;
       gap: 20px;
+
+      @media screen and (min-width: 768px) {
+         padding-top: 61px;
+         margin-bottom: 34px;
+         gap: 30px;
+      }
+
+      @media screen and (min-width: 1200px) {
+         padding-top: 18px;
+      }
    }
 
    &__list-item {
    }
 
    &__link {
-      color: #84a178;
+      transition: color $main-transition-time $cubic-bezier;
+      color: getColor("main-background-color");
       display: inline-block;
+   }
+
+   &__link:hover,
+   &__focus {
+      color: getColor("modalback-and-textcolor-white");
    }
 
    &__icon {
@@ -59,7 +135,6 @@
    }
 
    &__phone-number {
-      margin-bottom: 40px;
       font-family: "Montserrat";
       font-style: normal;
       font-weight: 700;
@@ -67,17 +142,29 @@
       line-height: 1.83;
       text-align: right;
 
-      color: #131313;
+      color: getColor("main-text-black");
+
+      @media screen and (min-width: 768px) {
+         font-size: 14px;
+         line-height: 1.86;
+      }
    }
 
    &__phone-link {
       text-decoration: none;
-      color: #fcfcfc;
+      color: getColor("modalback-and-textcolor-white");
    }
 
    &__bottom {
       padding: 20px;
       border-top: 1px solid #e1e1e1;
+
+      @media screen and (min-width: 768px) {
+         padding: 12px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
    }
 
    &__text {
@@ -88,6 +175,11 @@
       line-height: 1.5;
       text-align: center;
 
-      color: #7a7a7a;
+      color: getColor("all-rights-text");
+
+      @media screen and (max-width: 767px) {
+         display: flex;
+         flex-direction: column;
+      }
    }
 }
