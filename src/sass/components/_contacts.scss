@@ -1,0 +1,203 @@
+.contacts {
+background-color: getColor('main-background-color');
+}
+
+.contacts-container { 
+    padding-bottom: 60px;
+    @media screen and(min-width:768px) {
+        padding-bottom: 40px;
+    }
+    @media screen and(min-width:1200px) {
+        padding-bottom: 120px;
+    }
+}
+
+.contacts-list {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 20px;
+    @media screen and(min-width:768px) {
+        font-size: 14px;
+        }
+    @media screen and(min-width:1200px) {
+        gap: 32px;
+        font-size: 16px;
+        }
+}
+
+.contacts-item {
+    width: 100%;
+    padding: 40px 32px 24px;
+    background-color: getColor('modalback-and-textcolor-white');
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+    border-radius: 24px;
+    @media screen and(min-width:768px) {
+        width: calc((100% - 32px) / 3);
+        padding: 40px 24px;
+        }
+    
+    @media screen and(min-width:1200px) {
+        width: calc((100% - 64px) / 3);
+        padding: 40px;
+        }
+}
+
+.contacts-category {
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+    height: 22px;
+    padding: 4px 22px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.04em;
+    background-color: getColor('main-yellow');
+    border-radius: 4px;
+    @media screen and(min-width:768px) {
+        height: 30px;
+        font-size: 16px;
+        line-height: 1.4;
+        padding: 4px 13px;
+        margin-bottom: 32px;
+}
+     @media screen and(min-width:1200px) {
+        padding: 4px 14px;
+ }
+}
+.foodtruck {
+    @media screen and(min-width:768px) and (max-width:1199px) {
+            padding: 4px 10px;
+        }
+}
+
+.contacts-card {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.location-city {
+    line-height: 1.86;
+    letter-spacing: 0.04em;
+    margin-bottom: 8px;
+}
+
+.location-address {
+        line-height: 1.83;
+        letter-spacing: 0.04em;
+        color: getColor('product-text-babyshit');
+    &:hover {
+        text-decoration-line: underline;
+        text-underline-offset: 3px;
+    }
+}
+
+.work-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    line-height: 1.86;
+    padding: 24px 0;
+    border-top: 1px solid #E1E1E1;
+    border-bottom: 1px solid #E1E1E1;
+    @media screen and(min-width:768px) {
+        padding: 32px 0;
+    }    
+}
+
+.work-days {
+    @media screen and(min-width:1200px) {
+        letter-spacing: 0.04em;
+    }
+}
+
+.work-time {
+    color: #ABABAB;
+}
+
+.contact-link {
+    line-height: 1.6;
+    color: getColor('main-text-black');
+    @media screen and(min-width:768px) {
+        line-height: 1.5;
+        }
+}
+
+.contact-tel {
+    margin-bottom: 6px;
+    @media screen and(min-width:768px) {
+        margin-bottom: 4px;
+    }
+}
+
+.btn-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    @media screen and(min-width:768px) {
+            flex-direction: row;
+            justify-content: center;
+        }
+}
+
+.contacts-btn {
+    cursor: url('/src/images/icon_svg/vector.svg'), auto;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    width: 196px;
+    height: 42px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.29;
+    background-color: getColor('main-yellow');
+    border-radius: 10px;
+    color: getColor('main-text-black');
+    transition-property: color, fill, border-color, background-color;
+    transition-duration: $main-transition-time;
+    transition-timing-function: $cubic-bezier;
+}
+
+.location-btn {
+    background-color: getColor('main-yellow');
+    border: 0;
+    padding: 12px 43px 12px 40px;
+    &:hover {
+        color: #000000;
+        background-color: getColor('bright-green-btn');
+    }
+    &:focus {
+        color: #FFFFFF;;
+        background-color: getColor('bright-green-btn');
+    }
+}
+
+.franchise-btn {
+    color: #000000;
+    border: 2px solid #F8D24E;
+    background-color: transparent;
+    padding: 12px 56px 12px 53px;
+    &:hover {
+        border-color: getColor('bright-green-btn');
+    }
+    &:focus {
+        color: #FFFFFF;
+        border-color: getColor('bright-green-btn');
+    }
+}
+
+.btn-icon {
+    width: 5px;
+    height: 10px;
+    fill: #000000;
+    .contacts-btn:focus & {
+        fill: currentColor
+    }
+}
