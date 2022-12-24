@@ -208,14 +208,13 @@
     }
 }
 
-
-
-
-
-
-
 .about-icon {
     margin-left: 4px;
+
+}
+
+.about-btn:focus .about-icon {
+    fill: #FCFCFC;
 }
 
 .about-wrap {
