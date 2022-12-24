@@ -1,0 +1,236 @@
+.header {
+    // background-color: getColor('main-background-color');
+    padding-top: 12px;
+    padding-bottom: 12px;
+    @media screen and (min-width: 768px) {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    @media screen and(min-width:1200px) {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    position: fixed;
+    width: 100%;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+    margin-right: 0;
+
+    @media screen and (min-width: 1200px) {
+        margin-right: 308px;
+    }
+}
+
+.header-logo__image {
+    width: 40px;
+    height: 37px;
+    @media screen and (min-width: 768px) {
+        width: 48px;
+        height: 44px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 60px;
+        height: 65px; 
+    }
+}
+
+.header__navigation {
+    margin-right: auto;
+}
+
+.menu {
+    display: none;
+    @media screen and (min-width: 1200px) {
+        display: flex;
+    }
+    gap: 28px;
+}
+
+.menu__link {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.25;
+    color: getColor('modalback-and-textcolor-white');
+
+    transition: color $main-transition-time $cubic-bezier;
+    &:hover,
+    &:focus {
+        color: getColor('main-yellow');
+    }
+}
+
+.header-btn__wrap {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 32px;
+}
+
+.button {
+    min-width: 152px;
+    height: 42px;
+    border: 0;
+    border-radius: 10px;
+    padding: 0;
+    background-color: getColor('main-yellow');
+    color: #000000;
+    font-weight: 600;
+    font-size: 14px;    
+    line-height: 1.21;
+
+    transition: background-color $main-transition-time $cubic-bezier, color $main-transition-time $cubic-bezier;
+    &:hover {
+        background-color: getColor('bright-green-btn');
+    }
+    &:focus {
+    background-color: getColor('bright-green-btn');
+    color: #ffffff;
+    }
+}
+
+.button__icon {
+    margin-left: 8px;
+    .button:focus & {
+    fill: #ffffff;
+    }
+}
+
+.header__btn {
+    display: none;
+    @media screen and (min-width: 768px) {
+        display: block;
+    }
+}
+
+.menu-open {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    @media screen and (min-width: 1200px) {
+        display: none;
+    }
+}
+
+.menu-open-icon {
+    fill: #FFFFFF;
+    transition: fill $main-transition-time $cubic-bezier;
+    .menu-open:hover &,
+    .menu-open:focus & {
+        fill: getColor('main-yellow');
+    }
+}
+
+// ---------- MOBILE MENU -----------
+
+.mob-menu {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    background-color: #85A279;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    @media screen and (min-width: 768px) {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    @media screen and (min-width: 1200px) {
+        display: none;
+    }
+    transform: translateX(0);
+
+    transition: opacity  $main-transition-time $cubic-bezier, visibility $main-transition-time $cubic-bezier, transform $main-transition-time $cubic-bezier; 
+
+    > .container {
+        height: 100%;
+        padding-right: 32px;
+        padding-left: 32px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: auto;
+        outline: 2px solid blue($color: #000000);
+    }
+}
+
+.mob-menu.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateX(-100%);
+}
+
+.mob-menu__logo {
+    align-self: start;
+}
+
+.menu-close {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+}
+
+.menu-close-icon {
+    fill: #FFFFFF;
+    transition: fill $main-transition-time $cubic-bezier;
+
+    .menu-close:hover &,
+    .menu-close:focus & {
+        fill: getColor('main-yellow');
+    }
+}
+
+.mob-menu__list {
+    margin-top: 51px;
+    @media screen and (min-width: 768px) {
+        margin-top: 76px;
+    }
+}
+
+.mob-menu__item:not(:last-child) {
+    margin-bottom: 32px;
+}
+
+.mob-menu__link {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.22;
+    color: getColor('modalback-and-textcolor-white');
+    text-align: center;
+    @media screen and (min-width: 768px) {
+        font-size: 48px;
+    }
+
+    transition: color $main-transition-time $cubic-bezier;
+    &:hover,
+    &:focus {
+        color: getColor('main-text-black');
+    }
+}
+
+.mob-menu__btn {
+    margin-top: 110px;
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
