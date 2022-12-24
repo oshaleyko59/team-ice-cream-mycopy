@@ -61,8 +61,10 @@
    }
 
    &__uptitle {
+      display: block;
       margin-bottom: 16px;
 
+      font-weight: 700;
       font-size: 18px;
       line-height: 1.22;
 
@@ -80,6 +82,8 @@
    }
 
    &__title {
+      display: block;
+      font-weight: 700;
       font-size: 34px;
       line-height: 1.2;
       letter-spacing: 0.04em;
