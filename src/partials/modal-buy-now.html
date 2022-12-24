@@ -13,7 +13,8 @@
             <label for="icecream" class="check-content">
                 <div class="icecream-title">
                     <div class="img-tumb">
-                        <img srcset="./images/desktop/buy_now_modal/buynow1@1x.jpg 1x, ./images/desktop/buy_now_modal/buynow1@2x.jpg 2x, .images/desktop/buy_now_modal/buynow1@3x.jpg 3x" 
+                        <img 
+                        srcset="./images/desktop/buy_now_modal/buynow1@1x.jpg 1x, ./images/desktop/buy_now_modal/buynow1@2x.jpg 2x, ./images/desktop/buy_now_modal/buynow1@3x.jpg 3x" 
                         src="./images/desktop/buy_now_modal/buynow1@1x.jpg"
                         alt="звичайне морозиво" width="132">
                     </div>
@@ -24,7 +25,8 @@
             <label for="ice coffee" class="check-content">
                 <div class="icecream-title">
                     <div class="img-tumb--coffee">
-                        <img srcset="./images/desktop/buy_now_modal/buynow2@1x.jpg 1x, ./images/desktop/buy_now_modal/buynow2@2x.jpg 2x, ./images/desktop/buy_now_modal/buynow2@3x.jpg 3x"
+                        <img 
+                        srcset="./images/desktop/buy_now_modal/buynow2@1x.jpg 1x, ./images/desktop/buy_now_modal/buynow2@2x.jpg 2x, ./images/desktop/buy_now_modal/buynow2@3x.jpg 3x"
                         src="./images/desktop/buy_now_modal/buynow2@1x.jpg"
                         alt="кавове морозиво" width="132">
                     </div>
@@ -35,13 +37,28 @@
             <label for="milkshake" class="check-content">
                 <div class="icecream-title">
                     <div class="img-tumb--milkshake">
-                        <img srcset="./images/desktop/buy_now_modal/buynow3@1x.jpg 1x, ./images/desktop/buy_now_modal/buynow3@2x.jpg 2x, ./images/desktop/buy_now_modal/buynow3@3x.jpg 3x" 
+                        <img 
+                        srcset="./images/desktop/buy_now_modal/buynow3@1x.jpg 1x, ./images/desktop/buy_now_modal/buynow3@2x.jpg 2x, ./images/desktop/buy_now_modal/buynow3@3x.jpg 3x" 
                         src="./images/desktop/buy_now_modal/buynow3@1x.jpg"
                         alt="милкшейк" width="132">
                     </div>
                     milkshake</div>
             </label>
         </div>
+        <div class="register-form" role="group">
+            <label class="register-form-lable">
+                <input type="text" class="register-form-input" name="name" placeholder="Name" pattern="\w{3,16}" autofocus required>
+            </label>
+
+            <label class="register-form-lable">
+                <input type="tel" class="register-form-input" name="tel" placeholder="Phone" pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" required>
+            </label>
+
+            <label>
+                <textarea class="form-field-comments" name="comments" placeholder="Comment"></textarea>
+            </label>
+        </div>
+        <button class="register-form-btn" type="submit">Submit</button>
     </form>
 </div>
 </div>
