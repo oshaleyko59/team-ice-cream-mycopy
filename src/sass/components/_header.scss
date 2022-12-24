@@ -7,10 +7,11 @@
         padding-bottom: 20px;
     }
     @media screen and(min-width:1200px) {
+        
         padding-top: 8px;
         padding-bottom: 8px;
     }
-    position: fixed;
+    position: absolute;
     width: 100%;
 }
 
