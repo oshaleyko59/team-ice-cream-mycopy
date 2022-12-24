@@ -191,7 +191,28 @@
         margin: 0;
         margin-top: 32px;
     }
+
+    &:hover {
+        background: #0A8817;
+    
+    }
+
+    &:focus{
+        background: #0A8817;
+        color: #FCFCFC;
+    
+    }
+
+    &:disabled {
+        background: #ABABAB;
+    }
 }
+
+
+
+
+
+
 
 .about-icon {
     margin-left: 4px;
