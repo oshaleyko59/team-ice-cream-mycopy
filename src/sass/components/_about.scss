@@ -187,7 +187,8 @@
     margin: auto;
     padding: 12px 34px;
     margin-top: 10px;
-    transition: background-color $main-transition-time $cubic-bezier, fill $main-transition-time $cubic-bezier;
+    transition: background-color $main-transition-time $cubic-bezier, color $main-transition-time $cubic-bezier;
+    // transition: background-color 500ms , color 500ms, fill 900ms;
     @media screen and (min-width: 768px) {
         margin: 0;
         margin-top: 32px;
@@ -214,6 +215,7 @@
 
 .about-icon {
     margin-left: 4px;
+    transition: fill $main-transition-time $cubic-bezier;
 
 }
 
