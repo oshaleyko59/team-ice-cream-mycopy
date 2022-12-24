@@ -150,7 +150,8 @@ background-color: getColor('main-background-color');
     cursor: url('/src/images/icon_svg/vector.svg'), auto;
     display: flex;
     align-items: center;
-    gap: 7px;
+    
+    gap: 4px;
     width: 196px;
     height: 42px;
     font-family: 'Montserrat', sans-serif;
@@ -167,8 +168,8 @@ background-color: getColor('main-background-color');
 
 .location-btn {
     background-color: getColor('main-yellow');
-    border: 0;
-    padding: 12px 43px 12px 40px;
+    border: none;
+    padding: 12px 39px 12px 40px;
     &:hover {
         color: #000000;
         background-color: getColor('bright-green-btn');
@@ -183,7 +184,7 @@ background-color: getColor('main-background-color');
     color: #000000;
     border: 2px solid #F8D24E;
     background-color: transparent;
-    padding: 12px 56px 12px 53px;
+    padding: 12px 54px 12px 55px;
     &:hover {
         border-color: getColor('bright-green-btn');
     }
@@ -194,8 +195,6 @@ background-color: getColor('main-background-color');
 }
 
 .btn-icon {
-    width: 5px;
-    height: 10px;
     fill: #000000;
     .contacts-btn:focus & {
         fill: currentColor
