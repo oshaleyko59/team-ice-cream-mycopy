@@ -72,11 +72,7 @@
     gap: 32px;
 }
 
-.header__btn {
-    display: none;
-    @media screen and (min-width: 768px) {
-        display: block;
-    }
+.button {
     min-width: 152px;
     height: 42px;
     border: 0;
@@ -98,10 +94,17 @@
     }
 }
 
-.header-btn__icon {
+.button__icon {
     margin-left: 8px;
-    .header__btn:focus & {
+    .button:focus & {
     fill: #ffffff;
+    }
+}
+
+.header__btn {
+    display: none;
+    @media screen and (min-width: 768px) {
+        display: block;
     }
 }
 
@@ -120,12 +123,14 @@
 
 .menu-open-icon {
     fill: #FFFFFF;
+    transition: fill $main-transition-time $cubic-bezier;
     .menu-open:hover &,
     .menu-open:focus & {
         fill: getColor('main-yellow');
     }
-    transition: fill $main-transition-time $cubic-bezier;
 }
+
+// ---------- MOBILE MENU -----------
 
 .mob-menu {
     position: fixed;
@@ -140,12 +145,12 @@
         padding-top: 20px;
         padding-bottom: 20px;
     }
-
-    transition: opacity var(--transition), visibility var(--transition); 
-
     @media screen and (min-width: 1200px) {
         display: none;
     }
+    transform: translateX(0);
+
+    transition: opacity  $main-transition-time $cubic-bezier, visibility $main-transition-time $cubic-bezier, transform $main-transition-time $cubic-bezier; 
 
     > .container {
         height: 100%;
@@ -154,7 +159,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        // justify-content: space-between;
         overflow: auto;
         outline: 2px solid blue($color: #000000);
     }
@@ -164,12 +168,10 @@
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+    transform: translateX(-100%);
 }
 
 .mob-menu__logo {
-    // position: absolute;
-    // top: 12px;
-    // left: 32px;
     align-self: start;
 }
 
@@ -190,23 +192,13 @@
 
 .menu-close-icon {
     fill: #FFFFFF;
+    transition: fill $main-transition-time $cubic-bezier;
+
     .menu-close:hover &,
     .menu-close:focus & {
         fill: getColor('main-yellow');
     }
-    transition: fill $main-transition-time $cubic-bezier;
 }
-
-// .mob-menu__wrap {
-//     height: 100%;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: space-between;
-//     
-//     overflow: auto;
-//     outline: 2px solid tomato;
-// }
 
 .mob-menu__list {
     margin-top: 51px;
@@ -225,6 +217,9 @@
     line-height: 1.22;
     color: getColor('modalback-and-textcolor-white');
     text-align: center;
+    @media screen and (min-width: 768px) {
+        font-size: 48px;
+    }
 
     transition: color $main-transition-time $cubic-bezier;
     &:hover,
@@ -234,35 +229,8 @@
 }
 
 .mob-menu__btn {
-    width: 152px;
-    height: 42px;
     margin-top: 110px;
-    border: 0;
-    border-radius: 10px;
-    padding: 0;
-    background-color: getColor('main-yellow');
-    color: #000000;
-    font-weight: 600;
-    font-size: 14px;    
-    line-height: 1.21;
-
-    transition: background-color $main-transition-time $cubic-bezier, color $main-transition-time $cubic-bezier;
-    &:hover {
-        background-color: getColor('bright-green-btn');
-    }
-    &:focus {
-    background-color: getColor('bright-green-btn');
-    color: #ffffff;
-    }
-
     @media screen and (min-width: 768px) {
         display: none;
-    }
-}
-
-.mob-menu-btn__icon {
-    margin-left: 8px;
-    .mob-menu__btn:focus & {
-    fill: #ffffff;
     }
 }
