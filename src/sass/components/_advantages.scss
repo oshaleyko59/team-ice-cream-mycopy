@@ -1,0 +1,210 @@
+.advantages-section{
+    background-color: #84A178;
+    padding-top: 42px;
+    padding-bottom: 64px;
+
+    @media screen and(min-width:768px) {
+            padding-top: 48px;
+                padding-bottom: 204px;
+        }
+    
+        @media screen and(min-width:1200px) {
+            padding-top: 60px;
+                padding-bottom: 180px;
+        }
+}
+.advantages-list{
+text-align: center;
+display: flex;
+align-items: center;
+    flex-direction: column;
+    gap: 28px;
+    max-width: 100%;
+
+    @media screen and(min-width:768px){
+        gap: 80px;
+        justify-content: center;
+        flex-direction: row;
+    //    width: calc((100% - 160px) / 3);
+    }
+        @media screen and(min-width:1200px) {
+          gap: 32px;
+        }
+}
+.advantages-item {
+    @media screen and(min-width:480px) {
+        max-width: 230px;
+    }
+        @media screen and(min-width:768px){
+            max-width: 152px;
+        }
+       @media screen and(min-width:1200px) {
+        max-width: 368px;
+       }
+
+}
+
+.advantages-wraper {
+    &::before {
+            content: "";
+            display: inline-block;
+            margin-bottom: 16px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #F8D24E;
+            background-image: url(../images/icon_png/cow@1x.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 70%;
+            text-align: center;
+    
+            @media (min-device-pixel-ratio: 2),
+            (-webkit-min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url(../images/icon_png/cow@2x.png);
+            }
+    
+            @media (min-device-pixel-ratio: 3),
+            (-webkit-min-device-pixel-ratio: 3),
+            (min-resolution: 288dpi),
+            (min-resolution: 3dppx) {
+                background-image: url(../images/icon_png/cow@3x.png);
+            }
+
+                        @media screen and(min-width:768px) {
+                            margin-bottom: 32px;
+                        }
+            
+                        @media screen and(min-width:1200px) {
+                            margin-bottom: 40px;
+                        }
+        }
+    }
+    
+ .second-icon{
+        &::before {
+                content: "";
+                display: inline-block;
+                margin-bottom: 16px;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: #F8D24E;
+                background-image: url(../images/icon_png/weight@1x.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 70%;
+                text-align: center;
+        
+                @media (min-device-pixel-ratio: 2),
+                (-webkit-min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: url(../images/icon_png/weight@2x.png);
+                }
+        
+                @media (min-device-pixel-ratio: 3),
+                (-webkit-min-device-pixel-ratio: 3),
+                (min-resolution: 288dpi),
+                (min-resolution: 3dppx) {
+                    background-image: url(../images/icon_png/weight@3x.png);
+                }
+
+                                @media screen and(min-width:768px) {
+                                    margin-bottom: 32px;
+                                }
+                
+                                @media screen and(min-width:1200px) {
+                                    margin-bottom: 40px;
+                                }
+            }
+        
+    }
+.third-icon{
+    &::before {
+            content: "";
+            display: inline-block;
+            margin-bottom: 16px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #F8D24E;
+            background-image: url(../images/icon_png/icecream@1x.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 70%;
+            text-align: center;
+    
+            @media (min-device-pixel-ratio: 2),
+            (-webkit-min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url(../images/icon_png/icecream@2x.png);
+            }
+    
+            @media (min-device-pixel-ratio: 3),
+            (-webkit-min-device-pixel-ratio: 3),
+            (min-resolution: 288dpi),
+            (min-resolution: 3dppx) {
+                background-image: url(../images/icon_png/icecream@3x.png);
+            }
+
+                        @media screen and(min-width:768px) {
+                            margin-bottom: 32px;
+                        }
+            
+                        @media screen and(min-width:1200px) {
+                            margin-bottom: 40px;
+                        }
+        }
+}
+
+
+.advantages-quantity {
+    font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.22;
+        letter-spacing: 0.04em;
+        color: #FCFCFC;
+    
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 16px;
+   
+    @media screen and(min-width:768px) {
+            font-size: 48px;
+                line-height: 1.23;
+        }
+    
+        @media screen and(min-width:1200px) {
+            font-size: 58px;
+                line-height: 1.22;
+        }
+}
+
+.advantages-text {
+    font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 1.7;
+        color: #FCFCFC;
+        letter-spacing: 0.02em;
+
+        @media screen and(min-width:768px) {
+                font-weight: 400;
+                    font-size: 14px;
+                    line-height: 1.74;
+            }
+        
+            @media screen and(min-width:1200px) {
+                font-size: 16px;
+                    line-height: 1.76;
+            }
+}
