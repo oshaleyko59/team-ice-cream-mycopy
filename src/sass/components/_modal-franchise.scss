@@ -1,0 +1,216 @@
+.modal-franchise__backdrop {
+    position: fixed;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-franchise__modal {
+
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    box-sizing: border-box;
+    padding: 28px;
+    width: 280px;
+    min-height: 674px;
+
+    background: #FFFFFF;
+    border: 2px solid #F8D24E;
+    border-radius: 10px;
+
+    transform: translate(-50%, -50%);
+    transition: 500ms linear;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        width: 568px;
+        height: 668px;
+        padding: 32px 60px;
+        align-items: center;
+    }
+}
+
+.modal-franchise__modal-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    border: none;
+    
+    background-color: transparent;
+    width: 12px;
+    height: 12px;
+    
+    background: #FFFFFF;
+
+    @media screen and (min-width: 768px) {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+.modal-franchise__icon-modal {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+}
+
+.modal-franchise__title {
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Seymour One';
+    font-size: 16px;
+    line-height: 1.5;
+
+    @media screen and (min-width: 768px) {
+        font-size: 20px;
+        line-height: 1.4;
+        margin-bottom: 24px;
+        width: 322px;
+    }
+}
+
+.modal-franchise__text {
+    font-family: 'Montserrat';
+    width: 224px;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 24px;
+
+    @media screen and (min-width: 768px) {
+        font-size: 16px;
+        width: 448px;
+        margin-bottom: 32px;
+    }
+}
+
+.callback {
+    width: 224px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    flex-direction: column;
+
+    @media screen and (min-width: 768px) {
+        width: 368px;
+        margin: 0 auto;
+    }
+}
+
+
+.callback input {
+    box-sizing: border-box;
+    min-width: 224px;
+    padding: 0 12px;
+
+    background: rgba(248, 210, 78, 0.1);
+    border: 1px solid #84A178;
+    border-radius: 10px;
+    color: #131313;
+    @media screen and (min-width: 768px) {
+        min-width: 368px;
+        margin: 0 auto;
+        padding: 0 16px;
+    }
+}
+
+.callback textarea {
+    box-sizing: border-box;
+    min-width: 224px;
+    min-height: 64px;
+    padding: 8px 12px;
+
+    background: rgba(248, 210, 78, 0.1);
+    border: 1px solid #84A178;
+    border-radius: 10px;
+    color: #131313;
+
+    resize: none;
+    
+    @media screen and (min-width: 768px) {
+        min-width: 368px;
+        margin: 0 auto;
+        padding: 8px 16px;
+        min-height: 84px;
+    }
+}
+
+.form-label {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 12px;
+    font-family: 'Montserrat';
+    font-size: 12px;
+    line-height: 1.4;
+    color: #131313;
+}
+
+.form-label:last-child {
+    margin-bottom: 24px;
+    
+    @media screen and (min-width: 768px) {
+        margin-bottom: 32px;
+    }
+}
+
+.form-label .input-field {
+    height: 32px;
+    
+    @media screen and (min-width: 768px) {
+        height: 42px;
+    }
+}
+
+.input-field {
+    position: relative;
+}
+
+
+.submit-btn {
+    box-sizing: border-box;
+    width: 114px;
+    height: 42px;
+    margin: 0 auto;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    background: #F8D24E;
+    border: 2px solid #F8D24E;
+    border-radius: 10px;
+
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.25;
+    color: #131313;
+    &:hover {
+        background-color: #0A8817;
+    }
+    &:focus {
+        background-color: #0A8817;
+        color: #FFFFFF;
+    }
+    
+    @media screen and (min-width: 768px) {
+        width: 121px;
+        font-size: 14px;
+        line-height: 1.21;
+    }
+}
