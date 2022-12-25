@@ -181,7 +181,6 @@
 .hero-btn {
     outline: none;
     transition: 250ms border, transform cubic-bezier(0.4, 0, 0.2, 1);
-    cursor: pointer;
     border: 2px solid #F8D24E;
     background-color: transparent;
     color: #131313;
@@ -219,7 +218,6 @@
     transition-property: color, transform;
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     outline: none;
-    cursor: pointer;
     font-size: 12px;
     font-weight: 600;
     line-height: calc(14.6 / 12);
