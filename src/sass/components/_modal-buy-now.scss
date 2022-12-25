@@ -241,9 +241,6 @@ box-shadow: 0px 1px 1px rgb(0 0 0 / 12%), 0px 4px 4px rgb(0 0 0 / 6%),
     }
 }
 
-// .register-form-input:invalid:focus {
-//     background-color: red;
-// }
 
 .register-form-input::placeholder {
     font-family: 'Montserrat';
@@ -258,6 +255,14 @@ box-shadow: 0px 1px 1px rgb(0 0 0 / 12%), 0px 4px 4px rgb(0 0 0 / 6%),
 .register-form-input:focus {
     border-color: #EFD478;
 }
+
+
+
+.register-form-input:not(:focus):not(:placeholder-shown):invalid {
+    background-color: rgb(243, 148, 148);
+}
+
+
 
 .form-field-comments {
     width: 368px;
@@ -334,6 +339,3 @@ box-shadow: 0px 1px 1px rgb(0 0 0 / 12%), 0px 4px 4px rgb(0 0 0 / 6%),
     color: #FCFCFC;
 }
 
-// .register-form-input:required {
-//     border-color: #f44336;
-// }
