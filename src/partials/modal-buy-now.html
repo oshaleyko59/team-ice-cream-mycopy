@@ -1,0 +1,64 @@
+<div class="overlay js-overlay-modal">
+<div class="modal">
+    <button type="button" class="modal-close js-modal-close">
+        <svg class="icon-modal">
+        <use href="./images/sprite.svg#close_black"></use>
+        </svg>
+    </button>
+    
+    <h2 class="modal-header__title">Buy now</h2>
+    <form class="buying-form">
+        <div class="icecream-check">
+            <input type="checkbox" name="icecream" value="ice cream" class="modal-check visually-hidden" id="icecream" >
+            <label for="icecream" class="check-content">
+                <div class="icecream-title">
+                    <div class="img-tumb">
+                        <img 
+                        srcset="./images/desktop/buy_now_modal/buynow1@1x.jpg 1x, ./images/desktop/buy_now_modal/buynow1@2x.jpg 2x, ./images/desktop/buy_now_modal/buynow1@3x.jpg 3x" 
+                        src="./images/desktop/buy_now_modal/buynow1@1x.jpg"
+                        alt="звичайне морозиво" width="132">
+                    </div>
+                    ice cream</div>
+            </label>
+
+            <input type="checkbox" name="ice coffee" value="ice coffee" class="modal-check visually-hidden" id="ice coffee" checked autofocus>
+            <label for="ice coffee" class="check-content">
+                <div class="icecream-title">
+                    <div class="img-tumb--coffee">
+                        <img 
+                        srcset="./images/desktop/buy_now_modal/buynow2@1x.jpg 1x, ./images/desktop/buy_now_modal/buynow2@2x.jpg 2x, ./images/desktop/buy_now_modal/buynow2@3x.jpg 3x"
+                        src="./images/desktop/buy_now_modal/buynow2@1x.jpg"
+                        alt="кавове морозиво" width="132">
+                    </div>
+                    ice coffee</div>
+            </label>
+
+            <input type="checkbox" name="milkshake" value="milkshake" class="modal-check visually-hidden" id="milkshake" >
+            <label for="milkshake" class="check-content">
+                <div class="icecream-title">
+                    <div class="img-tumb--milkshake">
+                        <img 
+                        srcset="./images/desktop/buy_now_modal/buynow3@1x.jpg 1x, ./images/desktop/buy_now_modal/buynow3@2x.jpg 2x, ./images/desktop/buy_now_modal/buynow3@3x.jpg 3x" 
+                        src="./images/desktop/buy_now_modal/buynow3@1x.jpg"
+                        alt="милкшейк" width="132">
+                    </div>
+                    milkshake</div>
+            </label>
+        </div>
+        <div class="register-form" role="group">
+            <label class="register-form-lable">
+                <input type="text" class="register-form-input" name="name" placeholder="Name" pattern="\w{3,16}" autofocus required>
+            </label>
+
+            <label class="register-form-lable">
+                <input type="tel" class="register-form-input" name="tel" placeholder="Phone" pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" required>
+            </label>
+
+            <label>
+                <textarea class="form-field-comments" name="comments" placeholder="Comment"></textarea>
+            </label>
+        </div>
+        <button class="register-form-btn" type="submit">Submit</button>
+    </form>
+</div>
+</div>
