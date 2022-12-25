@@ -1,5 +1,5 @@
 .about {
-    background-color: #84a178;
+    // background-color: #84a178;
     padding: 61px 20px 50px 20px;
     width: 100%;
 
@@ -7,7 +7,7 @@
         padding: 60px 32px ;
     }
     @media screen and (min-width: 1200px) {
-        padding: 60px 17px;
+        padding: 60px 17px 152px 17px;
     }
    
 }
@@ -65,12 +65,13 @@
         line-height: 45px;
         font-size: 36px;
         max-width: 500px;
+        margin-bottom: 82px;
     }
 }
 .thumb  {
     margin: auto;
     background-color: #F8D24E;
-    margin-bottom: 62px;
+    margin-bottom: 40px;
     border-radius: 50%;
     max-width: 280px;
     background: linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgb(248, 210, 78, 0.7)), #D9D9D9;
@@ -187,6 +188,8 @@
     margin: auto;
     padding: 12px 34px;
     margin-top: 10px;
+    transition: background-color $main-transition-time $cubic-bezier, color $main-transition-time $cubic-bezier;
+    // transition: background-color 500ms , color 500ms, fill 900ms;
     @media screen and (min-width: 768px) {
         margin: 0;
         margin-top: 32px;
@@ -205,11 +208,15 @@
 
     &:disabled {
         background: #ABABAB;
+
+   
     }
+
 }
 
 .about-icon {
     margin-left: 4px;
+    transition: fill $main-transition-time $cubic-bezier;
 
 }
 
