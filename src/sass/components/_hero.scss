@@ -7,7 +7,7 @@
     background-repeat: no-repeat;
     padding-left: 20px;
     padding-right: 53px;
-    padding-top: 1px;
+    // padding-top: 1px;
     background-size: 260px, 330px;
     background-position: right 20px top 255px, bottom;
     background-image: url(../images/mobile/main/icecreamhero-mobile@1x.webp) fixed,
@@ -125,16 +125,16 @@
 }
 
 .hero-wrapper {
-    margin-top: 99px;
+    padding-top: 99px;
     display: flex;
     justify-content: space-between;
 
     @media screen and (min-width:768px) {
-        margin-top: 80px;
+        padding-top: 80px;
     }
 
     @media screen and (min-width:1200px) {
-        margin-top: 118px;
+        padding-top: 118px;
     }
 }
 
@@ -338,9 +338,38 @@
     }
 }
 
-.hero-svg {
-    fill: #FCFCFC;
-    display: block;
+// .hero-svg {
+//     fill: #FCFCFC;
+//     display: block;
+// }
+.subtitle__btn {
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition-property: height,width,background-image;
+    transition-duration: .25s;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    // transition: 250ms width, height linear;
+    border: none;
+    outline: none;
+    padding: 0;
+   
+    width: 38px;
+    height: 14px;
+    
+    background-image: url(../images/icon_svg/arrow_white_default.svg);
+
+    &:hover {
+        width: 45px;
+        height: 14px;
+        background-image: url(../images/icon_svg/arrow_white_hover.svg);
+    }
+
+    &:focus {
+        background-image: url(../images/icon_svg/arrow_white_focus.svg);
+        width: 48px;
+        height: 20px;
+    }
 }
 
 /* customizable snowflake styling */
