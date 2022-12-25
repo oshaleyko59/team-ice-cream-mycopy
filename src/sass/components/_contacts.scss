@@ -1,7 +1,3 @@
-.contacts {
-background-color: getColor('main-background-color');
-}
-
 .contacts-container { 
     padding-bottom: 60px;
     @media screen and(min-width:768px) {
@@ -23,10 +19,12 @@ background-color: getColor('main-background-color');
     margin-bottom: 20px;
     @media screen and(min-width:768px) {
         font-size: 14px;
+        margin-bottom: 40px;
         }
     @media screen and(min-width:1200px) {
         gap: 32px;
         font-size: 16px;
+        margin-bottom: 60px;
         }
 }
 
@@ -65,15 +63,21 @@ background-color: getColor('main-background-color');
         padding: 4px 13px;
         margin-bottom: 32px;
 }
-     @media screen and(min-width:1200px) {
+    @media screen and(min-width:1200px) {
         padding: 4px 14px;
  }
 }
 .foodtruck {
+    word-spacing: -4px;
     @media screen and(min-width:768px) and (max-width:1199px) {
             padding: 4px 10px;
+            word-spacing: normal;
         }
+    @media screen and(min-width:1200px) {
+        padding: 4px 14px;
+        word-spacing: normal;
 }
+} 
 
 .contacts-card {
     display: flex;
@@ -123,6 +127,7 @@ background-color: getColor('main-background-color');
 .contact-link {
     line-height: 1.6;
     color: getColor('main-text-black');
+    background-color: getColor('modalback-and-textcolor-white');
     @media screen and(min-width:768px) {
         line-height: 1.5;
         }
@@ -150,7 +155,6 @@ background-color: getColor('main-background-color');
     cursor: url('/src/images/icon_svg/vector.svg'), auto;
     display: flex;
     align-items: center;
-    
     gap: 4px;
     width: 196px;
     height: 42px;
@@ -175,8 +179,11 @@ background-color: getColor('main-background-color');
         background-color: getColor('bright-green-btn');
     }
     &:focus {
-        color: #FFFFFF;;
+        color: #FFFFFF;
         background-color: getColor('bright-green-btn');
+    }
+    &:disabled {
+        background-color: getColor('text-grey');
     }
 }
 
@@ -191,6 +198,9 @@ background-color: getColor('main-background-color');
     &:focus {
         color: #FFFFFF;
         border-color: getColor('bright-green-btn');
+    }
+    &:disabled {
+        border-color: getColor('text-grey');
     }
 }
 
