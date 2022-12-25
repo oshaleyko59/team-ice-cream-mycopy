@@ -1,0 +1,101 @@
+<div class="modal-ingred__backdrop js-overlay-modal">
+  <div class="modal-ingred">
+    <div class="modal-ingred__product">
+      <button
+        type="button"
+        class="modal-close modal-ingred__button-icon"
+        js-modal-close
+      >
+        <svg class="modal-ingred__icon" width="20" height="20">
+          <use href="./images/sprite.svg#close_black"></use>
+        </svg>
+      </button>
+      <p class="modal-ingred__title">Chololate icecream</p>
+      <div class="modal-ingred__block">
+        <div class="modal-ingred__background"></div>
+        <div class="modal-ingred__images"></div>
+      </div>
+
+      <div class="modal-ingred__checkbox">
+        <input type="checkbox" checked="checked" class="flipswitch-kcal flipswitch" />
+        <input type="checkbox" checked="checked" class="flipswitch-prot flipswitch" />
+        <input type="checkbox" checked="checked" class="flipswitch-fats flipswitch" />
+        <input type="checkbox" checked="checked" class="flipswitch-cards flipswitch" />
+      </div>
+    </div>
+    <div class="modal-ingred__composition">
+      <h2 class="modal-ingred__composition-title">Ingredients</h2>
+      <ul class="modal-ingred__composition-list">
+        <li class="modal-ingred__composition-item">
+          <p class="modal-ingred__composition-text">Milk</p>
+          <span class="modal-ingred__composition-text">100ml</span>
+        </li>
+        <li class="modal-ingred__composition-item">
+          <p class="modal-ingred__composition-text">Belgian chocolate</p>
+          <span class="modal-ingred__composition-text">20g</span>
+        </li>
+        <li class="modal-ingred__composition-item">
+          <p class="modal-ingred__composition-text">Cream</p>
+          <span class="modal-ingred__composition-text">150ml</span>
+        </li>
+        <li class="modal-ingred__composition-item">
+          <p class="modal-ingred__composition-text">Cocoa powder</p>
+          <span class="modal-ingred__composition-text">30g</span>
+        </li>
+        <li class="modal-ingred__composition-item">
+          <p class="modal-ingred__composition-text">Sugar</p>
+          <span class="modal-ingred__composition-text">40g</span>
+        </li>
+        <li class="modal-ingred__composition-item">
+          <p class="modal-ingred__composition-text">Vanilla sugar</p>
+          <span class="modal-ingred__composition-text">10g</span>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <div class="modal-ingred__section">
+        <div class="modal-ingred__form-block">
+          <form class="modal-ingred__form">
+            <div class="modal-ingred__form-field">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="modal-ingred__form-input modal-ingred__form-item"
+                placeholder=" "
+                required
+              />
+              <label for="name" class="modal-ingred__form-label">Name</label>
+            </div>
+            <div class="modal-ingred__form-field">
+              <input
+                type="tel"
+                name="tel"
+                id="tel"
+                class="modal-ingred__form-input modal-ingred__form-item"
+                placeholder=" "
+                required
+                pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+              />
+              <label for="tel" class="modal-ingred__form-label">Phone</label>
+            </div>
+            <div class="modal-ingred__form-textarea modal-ingred__form-field">
+              <textarea
+                name="comment"
+                id="comment"
+                class="modal-ingred__textarea modal-ingred__form-item"
+                placeholder=" "
+              ></textarea>
+              <label for="comment" class="modal-ingred__form-label"
+                >Comment</label
+              >
+            </div>
+          </form>
+          <div class="modal-ingred__form-button">
+            <button type="submit" class="modal-ingred__form-btn">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
