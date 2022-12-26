@@ -98,6 +98,7 @@
 
 .button__icon {
     margin-left: 7px;
+    transition: fill $main-transition-time $cubic-bezier;
     .button:focus & {
     fill: #ffffff;
     }
