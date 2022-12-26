@@ -4,3 +4,6 @@ import './js/mobile-menu';
 import './js/about-modal';
 import './js/location-modal';
 import './js/franchise-modal';
+import './js/ingrid-modal-1';
+import './js/ingrid-modal-2';
+import './js/ingrid-modal-3';
