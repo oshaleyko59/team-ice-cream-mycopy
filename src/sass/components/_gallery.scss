@@ -1,0 +1,295 @@
+// У секції двох-колірній фон, його потрібно реалізувати
+//спозиціонувавши фонове зображення згідно макету.
+//Зображення в секції контентне. Додатково можна підібрати
+//тематичні зображення морозива і зробити їх анімовану зміну.
+
+//галерея та секція клієнтів - два окремі слайдери
+
+/* Верстка адаптивна, окрім мобільних пристроїв.
+Точки перелому:
+- mobile: верстка гумова, стає адаптивною на 480px;
+- tablet: 768px;
+- desktop: 1200px
+ */
+/*
+img size for mobile 280x130 r.2,15
+for tablet 704x327 r.2,15
+for desktop 1013x422 r.2,4
+ */
+/* Gallery
+У секції двох-колірній фон, його потрібно реалізувати
+спозиціонувавши фонове зображення згідно макету.
+Зображення в секції контентне. Додатково можна
+підібрати тематичні зображення морозива і  зробити їх анімовану зміну
+ */
+
+/* back ground desktop 1300x1350
+tablet 963x1017
+mobile  885x1242 */
+
+//TODO move mixins to vars
+@mixin retina2x {
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (-o-min-device-pixel-ratio: 2/1),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    @content;
+  }
+}
+
+@mixin retina3x {
+  @media (min-device-pixel-ratio: 3),
+    (-webkit-min-device-pixel-ratio: 3),
+    (-o-min-device-pixel-ratio: 3/1),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+    @content;
+  }
+}
+
+//** Style for default Slick dots
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0 0;
+
+  list-style-type: none;
+
+  li {
+    margin: 0 9px;
+  }
+
+  button {
+    display: block;
+    width: 12px;
+    height: 12px;
+    padding: 0;
+
+    border: none;
+    border-radius: 100%;
+    background-color: #d9d9d9; //TODO change to var;
+
+    text-indent: -9999px;
+  }
+
+  li.slick-active button {
+    background-color: getColor('main-background-color');
+  }
+}
+
+//** Styles for section Gallery
+.gallery-container {
+  background-color: getColor('main-background-color'); //  center 15%
+  background-image: url('../images/background/background_mobile-1x.jpg');
+
+  //outline: solid 1px green; 
+
+  @include retina2x {
+    background-image: url('../images/background/background_mobile-2x.jpg');
+  }
+
+  @include retina3x {
+    background-image: url('../images/background/background_mobile-3x.jpg');
+  }
+
+  @media screen and (min-width: 886px) {
+    background-image: url('../images/background/background_tablet-1x.jpg');
+
+    @include retina2x {
+      background-image: url('../images/background/background_tablet-2x.jpg');
+    }
+
+    @include retina3x {
+      background-image: url('../images/background/background_tablet-3x.jpg');
+    }
+  }
+  @media screen and (min-width: 964px) {
+    background-image: url('../images/background/background_desktop-1x.jpg');
+
+    @include retina2x {
+      background-image: url('../images/background/background_desktop-2x.jpg');
+    }
+    @include retina3x {
+      background-image: url('../images/background/background_desktop-3x.jpg');
+    }
+  }
+}
+
+.gallery {
+  width: 100%;
+  // height: 130px;
+  min-width: 320px;
+  margin: 0 auto;
+
+  // padding: 80px auto 64px auto;
+}
+
+.gallery__slider {
+  width: inherited;
+  margin: auto;
+  margin-top: 80px;
+
+  //outline: solid 1px red;
+}
+
+//
+.gallery__slide {
+  // width: 100%; //calc(100vw - 40px)
+  margin: auto;
+  border-radius: 8px;
+
+  @media screen and (min-width: 768px) {
+    border-radius: 18px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    border-radius: 24px;
+  }
+  	img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+}
+
+//** Styles for Reviews slider
+
+.reviews__list {
+  width: 100%;
+  margin: auto;
+  margin-top: 80px;
+ // outline: solid 1px blue;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 100px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 140px;
+  }
+}
+
+.reviews__item {
+  @include base-fonts;
+  margin-bottom: 12px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 22px;
+  }
+}
+
+.reviews__img {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  background-color: teal;
+  margin: 0 auto;
+  background-size: 85px 85px;
+}
+
+.reviews__feedback {
+  border-radius: 10px;
+  background-color: getColor('main-background-color');
+  color: getColor('modalback-and-textcolor-white');
+  width: calc(100vw - 40px); // calc(100vw - 40px)
+  height: 256px;
+  display: flex;
+  padding: 35px 39px;
+  margin: 32px auto;
+
+  @media screen and (min-width: 480px) { //440px
+    border-radius: 24px;
+    padding: 28px 80px;
+    width: 440px;
+    height: 256px;
+  }
+
+  @media screen and (min-width: 768px) {
+    border-radius: 24px;
+    padding: 28px 80px;
+    width: 705px;
+    height: 138px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 43px 109px;
+    width: 968px;
+    height: 138px;
+  }
+}
+
+.reviews__text {
+  margin: auto;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 31px;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 27px;
+    letter-spacing: 0.04em;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+    line-height: 30px;
+  }
+}
+
+.reviews__name {
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+  height: 37px;
+  color: getColor('main-text-black');
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+    height: 25px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    height: 30px;
+  }
+}
+
+.reviews__img.customer1 {
+  background-image: url('../images/reviews/emily-1x.jpg');
+
+  @include retina2x {
+    background-image: url('../images/reviews/emily-2x.jpg');
+  }
+
+  @include retina3x {
+    background-image: url('../images/reviews/emily-3x.jpg');
+  }
+}
+
+.reviews__img.customer2 {
+  background-image: url('../images/reviews/diana-1x.jpg');
+
+  @include retina2x {
+    background-image: url('../images/reviews/diana-2x.jpg');
+  }
+
+  @include retina3x {
+    background-image: url('../images/reviews/diana-3x.jpg');
+  }
+}
+
+.reviews__img.customer3 {
+  background-image: url('../images/reviews/bryan-1x.jpg');
+
+  @include retina2x {
+    background-image: url('../images/reviews/bryan-2x.jpg');
+  }
+
+  @include retina3x {
+    background-image: url('../images/reviews/bryan-3x.jpg');
+  }
+}
