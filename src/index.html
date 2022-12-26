@@ -24,6 +24,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <!-- OD: slick carousel slider -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <!-- endof OD -->
+
     <link rel="stylesheet" href="./sass/index.scss" />
     <script type="module" src="./index.js"></script>
   </head>
@@ -37,7 +42,7 @@
     <include src="./partials/about.html"></include>
     <include src="./partials/advantages.html"></include>
     <include src="./partials/gallery.html"></include>
-    <include src="./partials/customer.html"></include>
+    <!-- OD: the content is inside gallery.html <include src="./partials/customer.html"></include> -->
     <include src="./partials/contacts.html"></include>
     </main>
     <include src="./partials/footer.html"></include>
@@ -54,5 +59,18 @@
     <script src="./js/location-modal.js"></script>
     <script src="./js/franchise-modal.js"></script>
     <script src="./js/buy-now-modal.js"></script>
+
+          <!-- OD: jQuery script must be above slick script -->
+          <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+            integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+
+          <!-- OD: slick minified js -->
+          <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+          <!-- OD: TODO move to script file
+                                slick carousel function used in body above -->
+
+          <script src="./js/gallery-slider.js"></script>
+          <!-- endof OD -->
   </body>
 </html>
