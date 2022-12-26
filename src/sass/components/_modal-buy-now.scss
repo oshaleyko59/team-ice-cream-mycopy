@@ -44,8 +44,8 @@
     align-items: center;
     justify-content: center;
     margin-left: auto;
-    width: 20px;
-    height: 20px;
+    width: 12px;
+    height: 12px;
     padding: 5px;
     border-radius: 50%;
     background-color: getColor('modalback-and-textcolor-white');
@@ -53,8 +53,8 @@
     fill: getColor('main-text-black');
     transition: fill $main-transition-time $cubic-bezier;
     @media screen and (min-width: 768px) {
-        width: 24px;
-        height: 24px;
+        width: 14px;
+        height: 14px;
     }
 }
 
@@ -63,11 +63,11 @@
 }
 
 .icon-modal {
-    width: 20px;
-    height: 20px;
+    width: 12px;
+    height: 12px;
     @media screen and (min-width: 768px) {
-        width: 24px;
-        height: 24px;
+        width: 14px;
+        height: 14px;
     }
 }
 
@@ -168,7 +168,15 @@
     line-height: 1.25;
     letter-spacing: 0.04em;
     color: getColor('main-text-black');
-    transition: background-color $main-transition-time $cubic-bezier, box-shadow$main-transition-time $cubic-bezier;
+    transition: background-color $main-transition-time $cubic-bezier, box-shadow $main-transition-time $cubic-bezier;
+}
+
+.icecream-title--coffee {
+    border: 2px solid rgb(248, 210, 78);
+}
+
+.icecream-title--milkshake {
+    border: 2px solid rgb(213, 117, 63);
 }
 
 .icecream-check {
@@ -189,14 +197,25 @@
 
 .icecream-title:hover,
 .icecream-title:focus {
-background-color: rgba(248, 210, 78,0.3);
+background-color: rgba(248, 210, 78, 0.1);
 box-shadow: 0px 1px 1px rgb(0 0 0 / 12%), 0px 4px 4px rgb(0 0 0 / 6%),
                 1px 4px 6px rgb(0 0 0 / 16%);
 }
 
-.modal-check:checked + .check-content > .icecream-title {
-    background-color: #EFD478;
+
+
+.modal-check:checked + .check-content > .icecream-title--icecream {
+    background-color: rgb(156,190,143);
 }
+
+.modal-check:checked + .check-content > .icecream-title--coffee {
+    background-color: rgb(248, 210, 78);
+}
+
+.modal-check:checked + .check-content > .icecream-title--milkshake {
+    background-color: rgb(213, 117, 63);
+}
+
 
 
 .register-form {
