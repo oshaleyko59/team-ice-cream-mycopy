@@ -38,17 +38,24 @@
 }
 
 .modal-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     right: 12px;
     top: 12px;
     border: none;
 
     background-color: transparent;
-    width: 24px;
-    height: 24px;
+    width: 12px;
+    height: 12px;
 
     background: #FFFFFF;
 
+    @media screen and (min-width: 768px) {
+        width: 14px;
+        height: 14px;
+    }
 }
 
 .icon-modal {
@@ -62,10 +69,6 @@
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-}
-
-.backdrop.js-overlay-modal .modal {
-    transform: translate(-50%, -50%) rotate(180deg);
 }
 
 .modal-production__title {
@@ -85,10 +88,13 @@
 .modal-production__video {
     margin-bottom: 20px;
     width: 224px;
+    height: 199px;
+    border-radius: 10px;
 
     @media screen and (min-width: 768px) {
         margin-bottom: 32px;
         width: 448px;
+        height: 205px;
     }
 }
 

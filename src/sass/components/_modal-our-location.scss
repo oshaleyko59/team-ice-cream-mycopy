@@ -38,17 +38,24 @@
 }
 
 .modal-location__modal-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     right: 12px;
     top: 12px;
     border: none;
 
     background-color: transparent;
-    width: 24px;
-    height: 24px;
+    width: 12px;
+    height: 12px;
 
     background: #FFFFFF;
 
+    @media screen and (min-width: 768px) {
+        width: 14px;
+        height: 14px;
+    }
 }
 
 .modal-location__icon-modal {
@@ -76,6 +83,7 @@
     margin-bottom: 24px;
     width: 224px;
     height: 199px;
+    border-radius: 10px;
 
     @media screen and (min-width: 768px) {
         margin-bottom: 32px;
@@ -99,16 +107,19 @@
     line-height: 1.25;
     color: #131313;
     margin: 0 auto;
+
     &:hover {
-    background-color: #0A8817;
+        background-color: #0A8817;
     }
+
     &:focus {
-    background-color: #0A8817;
-    color: #FFFFFF;
+        background-color: #0A8817;
+        color: #FFFFFF;
     }
+
     @media screen and (min-width: 768px) {
 
-    font-size: 14px;
-    line-height: 1.22;
+        font-size: 14px;
+        line-height: 1.22;
     }
 }
