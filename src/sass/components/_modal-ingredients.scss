@@ -95,13 +95,13 @@ ul {
   @media screen and (min-width: 480px) {
     padding: 28px 20px;
     min-width: 280px;
-    min-height: 968px;
+    // min-height: 968px;
   }
 
   @media screen and (min-width: 768px) {
     padding: 32px 40px;
     min-width: 568px;
-    min-height: 996px;
+    // min-height: 996px;
   }
 }
 
@@ -497,6 +497,7 @@ ul {
   padding: 12px 34px;
   width: 114px;
   height: 42px;
+  
 
   border: none;
   box-shadow: transparent;
