@@ -10,8 +10,6 @@
 }
 
 .modal-franchise__modal {
-
-
     position: absolute;
     top: 50%;
     left: 50%;
@@ -45,11 +43,11 @@
     right: 12px;
     top: 12px;
     border: none;
-    
+
     background-color: transparent;
     width: 12px;
     height: 12px;
-    
+
     background: #FFFFFF;
 
     @media screen and (min-width: 768px) {
@@ -107,7 +105,6 @@
     }
 }
 
-
 .callback input {
     box-sizing: border-box;
     min-width: 224px;
@@ -117,6 +114,7 @@
     border: 1px solid #84A178;
     border-radius: 10px;
     color: #131313;
+
     @media screen and (min-width: 768px) {
         min-width: 368px;
         margin: 0 auto;
@@ -136,7 +134,7 @@
     color: #131313;
 
     resize: none;
-    
+
     @media screen and (min-width: 768px) {
         min-width: 368px;
         margin: 0 auto;
@@ -160,7 +158,7 @@
 
 .form-label:last-child {
     margin-bottom: 24px;
-    
+
     @media screen and (min-width: 768px) {
         margin-bottom: 32px;
     }
@@ -168,7 +166,7 @@
 
 .form-label .input-field {
     height: 32px;
-    
+
     @media screen and (min-width: 768px) {
         height: 42px;
     }
@@ -177,7 +175,6 @@
 .input-field {
     position: relative;
 }
-
 
 .submit-btn {
     box-sizing: border-box;
@@ -200,14 +197,16 @@
     font-size: 12px;
     line-height: 1.25;
     color: #131313;
+
     &:hover {
         background-color: #0A8817;
     }
+
     &:focus {
         background-color: #0A8817;
         color: #FFFFFF;
     }
-    
+
     @media screen and (min-width: 768px) {
         width: 121px;
         font-size: 14px;
