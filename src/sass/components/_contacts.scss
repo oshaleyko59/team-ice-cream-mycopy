@@ -111,6 +111,10 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
+
+    @media screen and(min-width:768px) {
+        gap: 32px;
+    }
 }
 
 .location-city {
