@@ -81,7 +81,7 @@ mobile  885x1242 */
 }
 
 //** Styles for section Gallery
-.gallery-container {
+.gallery{
   background-color: getColor('main-background-color'); //  center 15%
   background-image: url('../images/background/background_mobile-1x.jpg');
 
@@ -123,6 +123,7 @@ mobile  885x1242 */
   // height: 130px;
   min-width: 320px;
   margin: 0 auto;
+  
 
   // padding: 80px auto 64px auto;
 }
@@ -138,6 +139,7 @@ mobile  885x1242 */
 //
 .gallery__slide {
   // width: 100%; //calc(100vw - 40px)
+  position: relative;
   margin: auto;
   border-radius: 8px;
 
@@ -155,20 +157,24 @@ mobile  885x1242 */
 	}
 }
 
+
 //** Styles for Reviews slider
 
 .reviews__list {
-  width: 100%;
+  // width: 100%;
   margin: auto;
-  margin-top: 80px;
+      padding-top: 186px;
+        padding-bottom: 394px;
  // outline: solid 1px blue;
 
   @media screen and (min-width: 768px) {
-    margin-top: 100px;
+    padding-top: 223px;
+      padding-bottom: 384px;
   }
 
   @media screen and (min-width: 1200px) {
-    margin-top: 140px;
+    padding-top: 140px;
+    padding-bottom: 196px;
   }
 }
 
