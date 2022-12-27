@@ -112,6 +112,16 @@ ul {
   }
 }
 
+
+.modal--anim {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-ingred__backdrop.js-overlay-modal .modal--anim {
+  transform: translate(-50%, -50%) scale(0);
+}
+
+
 //................................Heder-modal...................................//
 .modal-ingred__title {
   position: relative;
