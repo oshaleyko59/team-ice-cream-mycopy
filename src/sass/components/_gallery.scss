@@ -331,3 +331,25 @@ mobile  885x1242 */
     background-image: url('../images/reviews/bryan-3x.jpg');
   }
 }
+.reviews__img.customer4 {
+  background-image: url('../images/reviews/DR-85.jpg');
+
+  @include retina2x {
+    background-image: url('../images/reviews/DR-170.jpg');
+  }
+
+  @include retina3x {
+    background-image: url('../images/reviews/DR-255.jpg');
+  }
+}
+.reviews__img.customer5 {
+  background-image: url('../images/reviews/FR-85.jpg');
+
+  @include retina2x {
+    background-image: url('../images/reviews/FR-170.jpg');
+  }
+
+  @include retina3x {
+    background-image: url('../images/reviews/FR-255.jpg');
+  }
+}
