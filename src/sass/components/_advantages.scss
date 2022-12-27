@@ -1,16 +1,16 @@
 .advantages-section{
     // background-color: #84A178;
-   
+
     padding-bottom: 64px;
 
     @media screen and(min-width:768px) {
-            
+
                 padding-bottom: 204px;
         }
-    
+
         @media screen and(min-width:1200px) {
-           
-                padding-bottom: 180px;
+
+                padding-bottom: 155px;//OD 155px->180
         }
 }
 .advantages-list{
@@ -33,7 +33,7 @@ align-items: center;
 }
 .advantages-item {
         max-width: 230px;
-    
+
         @media screen and(min-width:768px){
             max-width: 152px;
         }
@@ -57,14 +57,14 @@ align-items: center;
             background-position: center;
             background-size: 70%;
             text-align: center;
-    
+
             @media (min-device-pixel-ratio: 2),
             (-webkit-min-device-pixel-ratio: 2),
             (min-resolution: 192dpi),
             (min-resolution: 2dppx) {
                 background-image: url(../images/icon_png/cow@2x.png);
             }
-    
+
             @media (min-device-pixel-ratio: 3),
             (-webkit-min-device-pixel-ratio: 3),
             (min-resolution: 288dpi),
@@ -75,13 +75,13 @@ align-items: center;
                         @media screen and(min-width:768px) {
                             margin-bottom: 32px;
                         }
-            
+
                         @media screen and(min-width:1200px) {
                             margin-bottom: 40px;
                         }
         }
     }
-    
+
  .second-icon{
         &::before {
                 content: "";
@@ -96,14 +96,14 @@ align-items: center;
                 background-position: center;
                 background-size: 70%;
                 text-align: center;
-        
+
                 @media (min-device-pixel-ratio: 2),
                 (-webkit-min-device-pixel-ratio: 2),
                 (min-resolution: 192dpi),
                 (min-resolution: 2dppx) {
                     background-image: url(../images/icon_png/weight@2x.png);
                 }
-        
+
                 @media (min-device-pixel-ratio: 3),
                 (-webkit-min-device-pixel-ratio: 3),
                 (min-resolution: 288dpi),
@@ -114,12 +114,12 @@ align-items: center;
                                 @media screen and(min-width:768px) {
                                     margin-bottom: 32px;
                                 }
-                
+
                                 @media screen and(min-width:1200px) {
                                     margin-bottom: 40px;
                                 }
             }
-        
+
     }
 .third-icon{
     &::before {
@@ -135,14 +135,14 @@ align-items: center;
             background-position: center;
             background-size: 70%;
             text-align: center;
-    
+
             @media (min-device-pixel-ratio: 2),
             (-webkit-min-device-pixel-ratio: 2),
             (min-resolution: 192dpi),
             (min-resolution: 2dppx) {
                 background-image: url(../images/icon_png/icecream@2x.png);
             }
-    
+
             @media (min-device-pixel-ratio: 3),
             (-webkit-min-device-pixel-ratio: 3),
             (min-resolution: 288dpi),
@@ -153,7 +153,7 @@ align-items: center;
                         @media screen and(min-width:768px) {
                             margin-bottom: 32px;
                         }
-            
+
                         @media screen and(min-width:1200px) {
                             margin-bottom: 40px;
                         }
@@ -169,18 +169,18 @@ align-items: center;
         line-height: 1.22;
         letter-spacing: 0.04em;
         color: #FCFCFC;
-    
+
         align-items: center;
         display: flex;
         flex-direction: column;
         justify-content: center;
         margin-bottom: 16px;
-   
+
     @media screen and(min-width:768px) {
             font-size: 48px;
                 line-height: 1.23;
         }
-    
+
         @media screen and(min-width:1200px) {
             font-size: 58px;
                 line-height: 1.22;
@@ -201,7 +201,7 @@ align-items: center;
                     font-size: 14px;
                     line-height: 1.74;
             }
-        
+
             @media screen and(min-width:1200px) {
                 font-size: 16px;
                     line-height: 1.76;
