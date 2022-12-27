@@ -162,6 +162,7 @@
     line-height: 1.6;
     color: getColor('main-text-black');
     background-color: getColor('modalback-and-textcolor-white');
+    transition: color $main-transition-time $cubic-bezier;
 
     &:hover,
     &:focus {
