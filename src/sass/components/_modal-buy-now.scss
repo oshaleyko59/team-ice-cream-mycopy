@@ -92,7 +92,7 @@
 }
 
 .img-tumb {
-    
+    display: block;
     position: absolute;
     top: -64px;
     left: -2px;
@@ -155,6 +155,7 @@
 
 
 .icecream-title {
+    display: block;
     position: relative;
     width: 132px;
     height: 135px;
